@@ -1,0 +1,73 @@
+@import url(./reset.css);
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 17px;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #000;
+}
+
+h2 {
+  font-size: 53px;
+  font-weight: 700;
+}
+
+header {
+  position: relative;
+  min-height: 88px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    background: url(../img/mishka-logo-desktop.png) center no-repeat;
+    width: 50%;
+    height: 50%;
+    max-width: 149px;
+    min-height: 72px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  .menu-checkbox {
+    display: none;
+  }
+
+  .hamb {
+    background: url(../img/menu.png);
+    width: 20px;
+    height: 14px;
+    position: absolute;
+    right: 31px;
+    display: none;
+  }
+
+  .menu-checkbox:checked ~ .hamb {
+    background: url(../img/menu-close.png);
+    width: 21px;
+    height: 20px;
+    position: absolute;
+    right: 30px;
+  }
+
+  .main-menu {
+    flex-grow: 99;
+    border: 1px dashed red;
+    display: flex;
+    justify-content: space-between;
+
+    .item3 {
+      margin-left: auto;
+    }
+  }
+}
