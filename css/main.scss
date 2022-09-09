@@ -17,6 +17,10 @@ h2 {
   font-weight: 700;
 }
 
+.wrapper {
+  margin: 0 50px;
+}
+
 header {
   position: relative;
   min-height: 88px;
@@ -62,12 +66,127 @@ header {
 
   .main-menu {
     flex-grow: 99;
-    border: 1px dashed red;
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    margin: 0 50px;
 
+    a {
+      border-left: 1px solid rgba(0, 0, 0, 0.1);
+      padding: 32px 0;
+    }
+    a:first-child {
+      border: none;
+    }
+
+    .item1 {
+      padding-right: 36px;
+    }
+    .item2 {
+      padding-left: 35px;
+    }
     .item3 {
       margin-left: auto;
+      .search-text {
+        display: none;
+      }
+
+      .search-icon {
+        background-image: url(../img/search.png);
+        background-repeat: no-repeat;
+        margin: 0 32px;
+        width: 18px;
+        height: 18px;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+      }
+    }
+
+    .item4 {
+      .cart-icon {
+        background-image: url(../img/cart.png);
+        background-repeat: no-repeat;
+        margin: 0 31px;
+        width: 21px;
+        height: 18px;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.main {
+  .main-view {
+    height: 746px;
+    background: url(../img/hero-desktop1.png) center no-repeat;
+    background-color: #f9f9f9;
+
+    .top-menu {
+      display: flex;
+      font-size: 15px;
+      padding-top: 20px;
+
+      > div {
+        margin-left: auto;
+      }
+
+      > a {
+        margin-right: 61px;
+      }
+    }
+
+    h2 {
+      max-width: 700px;
+      text-align: center;
+      margin: 0 auto;
+      margin-top: 120px;
+      line-height: 57px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  header {
+    .logo {
+      background: url(../img/mishka-logo-tablet.png) center no-repeat;
+      position: absolute;
+      margin: 0;
+      left: 50px;
+      width: 113px;
+      right: auto;
+      top: auto;
+      bottom: auto;
+    }
+    .main-menu {
+      .item1 {
+        font-size: 15px;
+        position: absolute;
+        top: 76px;
+        border-right: none;
+      }
+
+      .item2 {
+        border: none;
+        font-size: 15px;
+        position: absolute;
+        top: 76px;
+        left: 232px;
+      }
+    }
+  }
+
+  .main-view {
+    .top-menu {
+      > a {
+        display: none;
+      }
+    }
+    h2 {
+      font-size: 50px;
+      line-height: 50px;
     }
   }
 }
