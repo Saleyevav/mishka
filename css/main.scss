@@ -6,12 +6,6 @@ body {
   font-size: 15px;
 }
 
-h2 {
-  font-size: 27px;
-  font-weight: 700;
-  line-height: 30px;
-}
-
 a {
   text-decoration: none;
   font-weight: 700;
@@ -119,16 +113,59 @@ header {
 }
 .main {
   .main-view {
-    background: url(../img/hero-desktop1.png) center no-repeat;
-    background-size: cover;
-    // background-color: #f9f9f9;
-    height: calc(100vh - 79px);
+    background: url(../img/hero-mobile@1x.jpg) no-repeat;
+    background-position: center -35px;
+
+    background-color: #f9f9f9;
+
     .top-menu {
       display: none;
     }
     h2 {
       font-size: 27px;
       line-height: 30px;
+      font-weight: 700;
+      text-align: center;
+
+      padding-top: 73px;
+      padding-bottom: 120px;
+    }
+
+    .green-cards {
+      a {
+        font-size: 20px;
+        line-height: 30px;
+        color: #fff;
+        margin-left: 30px;
+      }
+      .green-card {
+        min-height: 103px;
+        display: flex;
+        justify-content: space-between;
+        a {
+          width: 130px;
+          align-self: center;
+        }
+        div {
+          width: 50%;
+        }
+      }
+
+      .interior {
+        background-color: #63d1bb;
+        div {
+          background: url(../img/interior.png) no-repeat;
+          background-position: center right 36px;
+        }
+      }
+
+      .toys {
+        background-color: #56c3b2;
+        div {
+          background: url(../img/toy.png) no-repeat;
+          background-position: center right 27px;
+        }
+      }
     }
   }
 }
