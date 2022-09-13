@@ -10,6 +10,12 @@ a {
   text-decoration: none;
   font-weight: 700;
   color: #000;
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
 }
 
 .wrapper {
@@ -27,10 +33,12 @@ header {
     background: url(../img/mishka-logo-mobile.png) center no-repeat;
     width: 86px;
     height: 35px;
-  }
-
-  .menu-checkbox {
-    display: none;
+    &:hover {
+      opacity: 0.6;
+    }
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   .hamb {
@@ -39,14 +47,17 @@ header {
     height: 14px;
     position: absolute;
     right: 31px;
+    cursor: pointer;
   }
-
-  .menu-checkbox:checked ~ .hamb {
-    background: url(../img/menu-close.png);
-    width: 21px;
-    height: 20px;
-    position: absolute;
-    right: 30px;
+  .menu-checkbox {
+    display: none;
+    &:checked ~ .hamb {
+      background: url(../img/menu-close.png);
+      width: 21px;
+      height: 20px;
+      position: absolute;
+      right: 30px;
+    }
   }
 
   .main-menu {
@@ -59,6 +70,7 @@ header {
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.2s ease-out;
+    z-index: 10;
 
     a {
       display: flex;
@@ -76,9 +88,6 @@ header {
       padding-left: 76px;
     }
     .item3 {
-      .search-text {
-      }
-
       .search-icon {
         background-image: url(../img/search.png);
         background-repeat: no-repeat;
@@ -89,6 +98,16 @@ header {
         display: inline-block;
         vertical-align: middle;
         text-align: center;
+      }
+      &:hover {
+        .search-icon {
+          background-image: url(../img/search-hover.png);
+        }
+      }
+      &:active {
+        .search-icon {
+          background-image: url(../img/search-down.png);
+        }
       }
     }
 
@@ -102,6 +121,16 @@ header {
         display: inline-block;
         vertical-align: middle;
         text-align: center;
+      }
+      &:hover {
+        .cart-icon {
+          background-image: url(../img/cart-hover.png);
+        }
+      }
+      &:active {
+        .cart-icon {
+          background-image: url(../img/cart-down.png);
+        }
       }
     }
   }
@@ -147,11 +176,26 @@ header {
 
         div {
           width: 50%;
+          opacity: 0.8;
+        }
+
+        &:hover {
+          position: relative;
+          top: -5px;
+          div {
+            opacity: 1;
+          }
+        }
+
+        &:active {
+          div {
+            opacity: 0.7;
+          }
         }
       }
 
       .interior {
-        background-color: #63d1bb;
+        background-color: rgba(89, 213, 188, 1);
 
         div {
           background: url(../img/interior.png) no-repeat;
@@ -159,13 +203,21 @@ header {
         }
       }
 
+      .interior:hover {
+        box-shadow: 0px 5px 0px 0px rgba(89, 213, 188, 1);
+      }
+
       .toys {
-        background-color: #56c3b2;
+        background-color: rgba(70, 193, 174, 1);
 
         div {
           background: url(../img/toy.png) no-repeat;
           background-position: center right 27px;
         }
+      }
+
+      .toys:hover {
+        box-shadow: 0px 5px 0px 0px rgba(70, 193, 174, 1);
       }
     }
   }
