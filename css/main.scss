@@ -232,6 +232,80 @@ header {
   }
 }
 
+.week-product {
+  .headers {
+    min-height: 103px;
+    padding-top: 31px;
+    h2 {
+      font-weight: 700;
+      font-size: 17px;
+      line-height: 20px;
+      text-transform: uppercase;
+      color: #63d1bb;
+      margin-top: 5px;
+    }
+    h3 {
+      font-weight: 700;
+      font-size: 25px;
+      line-height: 30px;
+    }
+  }
+  .product {
+    width: auto;
+    display: grid;
+    // grid-template-columns: auto;
+    // grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+
+    .description {
+      line-height: 24px;
+      // margin-top: 28px;
+    }
+
+    .description-table {
+      margin-top: 28px;
+    }
+
+    .product-img {
+      margin-top: 28px;
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    .price {
+      margin-top: 26px;
+      font-weight: 700;
+      font-size: 17px;
+      line-height: 24px;
+      color: #444444;
+      justify-self: center;
+    }
+    .chost-btn {
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      justify-self: center;
+      width: 260px;
+      height: 52px;
+      border: 2px solid #444444;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 20px;
+      color: #444444;
+      text-transform: uppercase;
+      &:hover {
+        background-color: #444444;
+        color: #fff;
+      }
+      &:active {
+        background-color: #444444;
+        color: rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
+}
+
 @media (min-width: 768px) {
   .wrapper {
     margin: 0 50px;
@@ -362,6 +436,38 @@ header {
       left: 0;
       right: 0;
       bottom: -12px;
+    }
+  }
+  .week-product {
+    .product {
+      width: auto;
+      display: grid;
+      grid-template-areas:
+        "description product-img"
+        "table       product-img"
+        "price       product-img"
+        "btn         product-img";
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 2fr 2fr 1fr 1fr;
+      .description {
+        grid-area: description;
+      }
+      .product-img {
+        grid-area: product-img;
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .price {
+        grid-area: price;
+      }
+      .chost-btn {
+        grid-area: btn;
+        justify-self: center;
+        align-self: center;
+      }
     }
   }
 }
