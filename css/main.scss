@@ -23,21 +23,22 @@ a {
 }
 
 header {
-  min-height: 79px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  .logo {
-    background: url(../img/mishka-logo-mobile.png) center no-repeat;
-    width: 86px;
-    height: 35px;
-    &:hover {
-      opacity: 0.6;
-    }
-    &:active {
-      opacity: 0.3;
+  .logo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 79px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    .logo {
+      background: url(../img/mishka-logo-mobile.png) center no-repeat;
+      width: 86px;
+      height: 35px;
+      &:hover {
+        opacity: 0.6;
+      }
+      &:active {
+        opacity: 0.3;
+      }
     }
   }
 
@@ -46,6 +47,7 @@ header {
     width: 20px;
     height: 14px;
     position: absolute;
+    top: 32px;
     right: 31px;
     cursor: pointer;
   }
@@ -57,6 +59,9 @@ header {
       height: 20px;
       position: absolute;
       right: 30px;
+    }
+    &:checked ~ .main-menu {
+      max-height: 100%;
     }
   }
 
@@ -84,9 +89,11 @@ header {
     .item1 {
       padding-left: 76px;
     }
+
     .item2 {
       padding-left: 76px;
     }
+
     .item3 {
       .search-icon {
         background-image: url(../img/search.png);
@@ -135,19 +142,16 @@ header {
     }
   }
 
-  .menu-checkbox:checked ~ .main-menu {
-    max-height: 100%;
+  .bottom-menu {
+    display: none;
   }
 }
+
 .main {
   .main-view {
     background: url(../img/hero-mobile@1x.jpg) no-repeat;
     background-position: center -35px;
     background-color: #f9f9f9;
-
-    .top-menu {
-      display: none;
-    }
 
     h2 {
       font-size: 27px;
@@ -228,42 +232,50 @@ header {
     margin: 0 50px;
   }
   header {
-    min-height: 88px;
-    font-size: 17px;
+    display: flex;
+    flex-direction: column;
+
     .hamb {
       display: none;
     }
-    .logo {
+
+    .logo-wrapper {
       position: absolute;
-      left: 50px;
-      background: url(../img/mishka-logo-tablet.png) center no-repeat;
+      border-bottom: none;
+      height: 88px;
+      .logo {
+        margin-left: 50px;
+        background: url(../img/mishka-logo-tablet.png) center no-repeat;
 
-      height: 46px;
-      width: 113px;
+        height: 46px;
+        width: 113px;
+      }
     }
-    .main-menu {
-      position: static;
-      width: 100%;
-      max-height: 100%;
 
+    .main-menu {
+      font-size: 17px;
+      position: static;
+      height: 88px;
+      max-height: 100%;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
       flex-direction: row;
       justify-content: space-between;
       a {
         width: auto;
-        height: 88px;
+        height: auto;
         border-bottom: none;
         background: none;
       }
       .item1 {
         padding: 0 36px 0 50px;
         position: absolute;
-        top: 76px;
+        top: 106px;
         font-size: 15px;
       }
       .item2 {
         padding-left: 35px;
         position: absolute;
-        top: 76px;
+        top: 106px;
         left: 232px;
         font-size: 15px;
       }
@@ -282,6 +294,22 @@ header {
         padding-right: 50px;
       }
     }
+
+    .bottom-menu {
+      font-size: 15px;
+      display: flex;
+      justify-content: space-between;
+      padding-top: 20px;
+      background-color: #f9f9f9;
+      padding-right: 50px;
+      a {
+        margin-right: 61px;
+        display: none;
+      }
+      div {
+        margin-left: auto;
+      }
+    }
   }
 
   .main {
@@ -290,18 +318,6 @@ header {
       background: url(../img/hero-desktop1.png) no-repeat;
       background-position: center;
       background-color: #f9f9f9;
-      .top-menu {
-        display: flex;
-        justify-content: space-between;
-        padding-top: 20px;
-        a {
-          margin-right: 61px;
-          display: none;
-        }
-        div {
-          margin-left: auto;
-        }
-      }
 
       h2 {
         font-size: 43px;
@@ -348,45 +364,32 @@ header {
   header {
     position: relative;
     min-height: 88px;
-    font-size: 17px;
+    // font-size: 17px;
 
-    .logo {
-      background: url(../img/mishka-logo-desktop.png) center no-repeat;
-      width: 50%;
-      height: 50%;
-      max-width: 149px;
-      min-height: 72px;
-      margin: auto;
+    .logo-wrapper {
       position: absolute;
-      top: 0;
       left: 0;
-      bottom: 0;
       right: 0;
+      .logo {
+        background: url(../img/mishka-logo-desktop.png) center no-repeat;
+        width: 149px;
+        height: 72px;
+      }
     }
+
     .main-menu {
       position: static;
-      width: 100%;
-      max-height: 100%;
-
       flex-direction: row;
       justify-content: space-between;
-      a {
-        width: auto;
-        height: 88px;
-        border-bottom: none;
-        background: none;
-      }
+
       .item1 {
         padding: 0 36px 0 50px;
         position: static;
-        top: 76px;
         font-size: 17px;
       }
       .item2 {
         padding-left: 35px;
         position: static;
-        top: 76px;
-        left: 232px;
         font-size: 17px;
         border-left: 1px solid rgba(0, 0, 0, 0.1);
       }
@@ -402,16 +405,17 @@ header {
         padding-right: 50px;
       }
     }
+    .bottom-menu {
+      padding-left: 50px;
+      a {
+        margin-right: 61px;
+        display: block;
+      }
+    }
   }
 
   .main {
     .main-view {
-      .top-menu {
-        a {
-          margin-right: 61px;
-          display: block;
-        }
-      }
     }
     .main-view::after {
       height: 34px;
