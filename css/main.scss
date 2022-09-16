@@ -4,6 +4,7 @@
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 15px;
+  line-height: 30px;
 }
 
 a {
@@ -16,6 +17,55 @@ a {
   &:active {
     color: rgba(0, 0, 0, 0.3);
   }
+}
+
+.chost-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 260px;
+  height: 52px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  border: 2px solid #444444;
+  color: #444444;
+  text-transform: uppercase;
+  &:hover {
+    background-color: #444444;
+    color: #fff;
+  }
+  &:active {
+    background-color: #444444;
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.arrows {
+  display: flex;
+  width: 260px;
+  height: 52px;
+  justify-content: center;
+
+  a {
+    min-width: 50px;
+    min-height: 26px;
+    width: 100%;
+  }
+
+  .left-arrow {
+    background: url(../img/huge-arrow-left.svg) center no-repeat;
+  }
+
+  .right-arrow {
+    background: url(../img/huge-arrow-right.svg) center no-repeat;
+  }
+}
+
+h3 {
+  font-size: 27px;
+  line-height: 30px;
+  font-weight: 700;
 }
 
 .wrapper {
@@ -157,13 +207,10 @@ header {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      h2 {
-        font-size: 27px;
-        line-height: 30px;
-        font-weight: 700;
+
+      h3 {
         text-align: center;
         padding-top: 73px;
-        // padding-bottom: 120px;
       }
 
       .green-btns {
@@ -247,7 +294,6 @@ header {
       margin-top: 5px;
     }
     h3 {
-      font-weight: 700;
       font-size: 25px;
       line-height: 30px;
     }
@@ -289,45 +335,72 @@ header {
       color: #444444;
       justify-self: center;
     }
+
     .chost-btn {
       margin-top: 25px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       justify-self: center;
-      width: 260px;
-      height: 52px;
-      border: 2px solid #444444;
-      font-weight: 700;
-      font-size: 18px;
-      line-height: 20px;
-      color: #444444;
-      text-transform: uppercase;
-      &:hover {
-        background-color: #444444;
-        color: #fff;
-      }
-      &:active {
-        background-color: #444444;
-        color: rgba(255, 255, 255, 0.3);
-      }
     }
   }
   &::after {
     content: "";
     position: absolute;
     background: url(../img/zigzag-line-desktop.svg) repeat-x;
-    background-size: cover;
+    background-size: contain;
     height: 6px;
     left: 0;
     right: 0;
   }
 }
 
+.reviews {
+  display: block;
+  position: relative;
+  padding: 31px 0 45px 0;
+
+  h3 {
+  }
+  .text {
+    margin: 33px 0;
+  }
+  .author {
+    margin: 33px 0;
+  }
+  .arrows {
+    margin: 33px auto;
+    a {
+      border: 1px solid #ececec;
+    }
+  }
+  .chost-btn {
+    margin: 0 auto;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background: url(../img/zigzag-line-desktop.svg) repeat-x;
+    background-size: contain;
+    height: 6px;
+    left: -30px;
+    right: -30px;
+    bottom: 0;
+  }
+}
+
 @media (min-width: 768px) {
+  body {
+    font-size: 17px;
+    line-height: 30px;
+  }
   .wrapper {
     margin: 0 50px;
   }
+
+  h3 {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
   header {
     display: flex;
     flex-direction: column;
@@ -418,10 +491,7 @@ header {
       .wrapper {
         height: calc(100vh - 144px);
 
-        h2 {
-          font-size: 43px;
-          line-height: 50px;
-          font-weight: 700;
+        h3 {
           padding-top: 120px;
         }
 
@@ -456,13 +526,14 @@ header {
       }
     }
   }
+
   .week-product {
     padding-bottom: 17px;
+
     .headers {
       padding-top: 52px;
       padding-bottom: 38px;
       display: flex;
-      // justify-content: space-between;
 
       h2 {
         font-size: 17px;
@@ -470,11 +541,6 @@ header {
         max-width: 127px;
         text-align: center;
         margin-left: auto;
-      }
-
-      h3 {
-        font-size: 43px;
-        line-height: 50px;
       }
     }
 
@@ -491,8 +557,6 @@ header {
 
       .description {
         grid-area: description;
-        font-size: 17px;
-        line-height: 30px;
       }
 
       .description-table {
@@ -541,6 +605,10 @@ header {
 }
 
 @media (min-width: 1150px) {
+  h3 {
+    font-size: 53px;
+    line-height: 57px;
+  }
   header {
     position: relative;
     min-height: 88px;
@@ -597,9 +665,7 @@ header {
   .main {
     .main-view {
       .wrapper {
-        h2 {
-          font-size: 53px;
-          line-height: 57px;
+        h3 {
           max-width: 70%;
           margin: 0 auto;
         }
@@ -664,6 +730,32 @@ header {
       height: 23px;
       left: 0;
       right: 0;
+    }
+  }
+
+  .reviews {
+    display: grid;
+    grid-template-areas:
+      "A   h3       btn"
+      "A   txt      txt"
+      "A   author   arrows";
+    grid-template-columns: auto 292px 50%;
+    grid-template-rows: 1fr 1fr 1fr;
+    column-gap: 58px;
+    h3 {
+      grid-area: h3;
+    }
+    .text {
+      grid-area: txt;
+    }
+    .author {
+      grid-area: author;
+    }
+    .arrows {
+      grid-area: arrows;
+    }
+    .chost-btn {
+      grid-area: btn;
     }
   }
 }
