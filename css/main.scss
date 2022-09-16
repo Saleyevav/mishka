@@ -69,7 +69,8 @@ h3 {
 }
 
 .wrapper {
-  margin: 0 30px;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 header {
@@ -355,22 +356,30 @@ header {
 .reviews {
   display: block;
   position: relative;
-  padding: 31px 0 45px 0;
+  // padding: 0 0 45px 0;
+  margin-top: 33px;
+  margin-bottom: 45px;
 
   h3 {
+    margin: 33px 0;
   }
+
   .text {
     margin: 33px 0;
   }
+
   .author {
     margin: 33px 0;
+    font-size: 17px;
   }
+
   .arrows {
     margin: 33px auto;
     a {
       border: 1px solid #ececec;
     }
   }
+
   .chost-btn {
     margin: 0 auto;
   }
@@ -383,7 +392,7 @@ header {
     height: 6px;
     left: -30px;
     right: -30px;
-    bottom: 0;
+    bottom: -45px;
   }
 }
 
@@ -393,7 +402,8 @@ header {
     line-height: 30px;
   }
   .wrapper {
-    margin: 0 50px;
+    margin-left: 50px;
+    margin-right: 50px;
   }
 
   h3 {
@@ -602,6 +612,72 @@ header {
       right: 0;
     }
   }
+
+  .reviews.wrapper {
+    margin-left: 0;
+    padding-left: 50px;
+  }
+  .reviews {
+    margin-bottom: 68px;
+    display: grid;
+    height: 457px;
+    grid-template-areas:
+      "h3       btn"
+      "txt      txt"
+      "author   arrows";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 1fr 1fr;
+    background: url(../img/review.jpg) left no-repeat;
+    background-size: contain;
+    h3 {
+      grid-area: h3;
+      margin: 0;
+      justify-self: start;
+      align-self: flex-end;
+    }
+    .text {
+      grid-area: txt;
+      margin: 0;
+      justify-self: start;
+      align-self: center;
+    }
+    .author {
+      grid-area: author;
+      margin: 0;
+      font-size: 18px;
+      // margin-bottom: 47px;
+      justify-self: start;
+      align-self: center;
+    }
+    .arrows {
+      grid-area: arrows;
+      margin: 0;
+      width: 175px;
+      justify-self: end;
+      align-self: center;
+      a {
+        border: none;
+      }
+    }
+    .chost-btn {
+      grid-area: btn;
+      width: 175px;
+      justify-self: end;
+      align-self: flex-end;
+      margin: 0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      background: url(../img/zigzag-line-desktop.svg) repeat-x;
+      background-size: contain;
+      height: 17px;
+      left: -50px;
+      right: -50px;
+      bottom: -76px;
+    }
+  }
 }
 
 @media (min-width: 1150px) {
@@ -733,6 +809,10 @@ header {
     }
   }
 
+  .reviews.wrapper {
+    margin-left: 50px;
+    padding-left: 0;
+  }
   .reviews {
     display: grid;
     grid-template-areas:
@@ -756,6 +836,16 @@ header {
     }
     .chost-btn {
       grid-area: btn;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      background: url(../img/zigzag-line-desktop.svg) repeat-x;
+      background-size: contain;
+      height: 23px;
+      left: -50px;
+      right: -50px;
+      bottom: -80px;
     }
   }
 }
