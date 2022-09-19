@@ -11,9 +11,11 @@ a {
   text-decoration: none;
   font-weight: 700;
   color: #000;
+
   &:hover {
     color: rgba(0, 0, 0, 0.6);
   }
+
   &:active {
     color: rgba(0, 0, 0, 0.3);
   }
@@ -31,10 +33,12 @@ a {
   border: 2px solid #444444;
   color: #444444;
   text-transform: uppercase;
+
   &:hover {
     background-color: #444444;
     color: #fff;
   }
+
   &:active {
     background-color: #444444;
     color: rgba(255, 255, 255, 0.3);
@@ -110,6 +114,7 @@ header {
     right: 31px;
     cursor: pointer;
   }
+
   .menu-checkbox {
     display: none;
     &:checked ~ .hamb {
@@ -211,6 +216,7 @@ header {
     background: url(../img/hero-mobile@1x.jpg) no-repeat;
     background-position: center -35px;
     background-color: #f9f9f9;
+
     .wrapper {
       height: 55vh;
       display: flex;
@@ -294,6 +300,7 @@ header {
   .headers {
     padding-top: 31px;
     padding-bottom: 18px;
+
     h2 {
       font-weight: 700;
       font-size: 17px;
@@ -302,6 +309,7 @@ header {
       color: #63d1bb;
       margin-top: 5px;
     }
+
     h3 {
       font-size: 25px;
       line-height: 30px;
@@ -311,6 +319,7 @@ header {
   .product {
     display: grid;
     padding-bottom: 36px;
+
     .description {
       line-height: 24px;
     }
@@ -364,6 +373,7 @@ header {
 .about {
   margin-top: 31px;
   margin-bottom: 58px;
+
   .about-list {
     .about-item {
       font-size: 17px;
@@ -373,31 +383,37 @@ header {
         height: 82px;
       }
     }
+
     .item1 {
       .about-img {
         background: url(../img/icon-1.svg) left no-repeat;
       }
     }
+
     .item2 {
       .about-img {
         background: url(../img/icon-3.svg) left no-repeat;
       }
     }
+
     .item3 {
       .about-img {
         background: url(../img/icon-5.svg) left no-repeat;
       }
     }
+
     .item4 {
       .about-img {
         background: url(../img/icon-2.svg) left no-repeat;
       }
     }
+
     .item5 {
       .about-img {
         background: url(../img/icon-4.svg) left no-repeat;
       }
     }
+
     .item6 {
       .about-img {
         background: url(../img/icon-6.svg) left no-repeat;
@@ -478,7 +494,6 @@ header {
       .logo {
         margin-left: 50px;
         background: url(../img/mishka-logo-tablet.png) center no-repeat;
-
         height: 46px;
         width: 113px;
       }
@@ -492,18 +507,21 @@ header {
       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
       flex-direction: row;
       justify-content: space-between;
+
       a {
         width: auto;
         height: auto;
         border-bottom: none;
         background: none;
       }
+
       .item1 {
         padding: 0 36px 0 50px;
         position: absolute;
         top: 106px;
         font-size: 15px;
       }
+
       .item2 {
         padding-left: 35px;
         position: absolute;
@@ -511,9 +529,11 @@ header {
         left: 232px;
         font-size: 15px;
       }
+
       .item3 {
         margin-left: auto;
         border-left: 1px solid rgba(0, 0, 0, 0.1);
+
         .search-text {
           display: none;
         }
@@ -604,6 +624,11 @@ header {
         text-align: center;
         margin-left: auto;
       }
+
+      h3 {
+        font-size: 43px;
+        line-height: 50px;
+      }
     }
 
     .product {
@@ -665,10 +690,56 @@ header {
     }
   }
 
+  .about {
+    margin-top: 55px;
+    margin-bottom: 82px;
+
+    .about-list {
+      display: grid;
+      grid-template-areas:
+        "it1 it4"
+        "it2 it5"
+        "it3 it6";
+      grid-template-columns: 50% 50%;
+      .about-item {
+        font-size: 20px;
+        line-height: 22px;
+        .about-img {
+          margin-top: 25px;
+        }
+      }
+
+      .item1 {
+        grid-area: it1;
+      }
+
+      .item2 {
+        grid-area: it2;
+      }
+
+      .item3 {
+        grid-area: it3;
+      }
+
+      .item4 {
+        grid-area: it4;
+      }
+
+      .item5 {
+        grid-area: it5;
+      }
+
+      .item6 {
+        grid-area: it6;
+      }
+    }
+  }
+
   .reviews.wrapper {
     margin-left: 0;
     padding-left: 50px;
   }
+
   .reviews {
     margin-bottom: 68px;
     display: grid;
@@ -681,26 +752,29 @@ header {
     grid-template-rows: 1fr 1fr 1fr;
     background: url(../img/review.jpg) left no-repeat;
     background-size: contain;
+
     h3 {
       grid-area: h3;
       margin: 0;
       justify-self: start;
       align-self: flex-end;
     }
+
     .text {
       grid-area: txt;
       margin: 0;
       justify-self: start;
       align-self: center;
     }
+
     .author {
       grid-area: author;
       margin: 0;
       font-size: 18px;
-      // margin-bottom: 47px;
       justify-self: start;
       align-self: center;
     }
+
     .arrows {
       grid-area: arrows;
       margin: 0;
@@ -711,6 +785,7 @@ header {
         border: none;
       }
     }
+
     .chost-btn {
       grid-area: btn;
       width: 175px;
@@ -763,12 +838,14 @@ header {
         position: static;
         font-size: 17px;
       }
+
       .item2 {
         padding-left: 35px;
         position: static;
         font-size: 17px;
         border-left: 1px solid rgba(0, 0, 0, 0.1);
       }
+
       .item3 {
         margin-left: auto;
         border-left: 1px solid rgba(0, 0, 0, 0.1);
@@ -776,6 +853,7 @@ header {
           display: none;
         }
       }
+
       .item4 {
         border-left: 1px solid rgba(0, 0, 0, 0.1);
         padding-right: 50px;
@@ -830,6 +908,7 @@ header {
           margin: auto;
         }
       }
+
       h3 {
         grid-area: h3;
         white-space: nowrap;
@@ -858,6 +937,31 @@ header {
       height: 23px;
       left: 0;
       right: 0;
+    }
+  }
+
+  .about {
+    margin-top: 68px;
+    margin-bottom: 90px;
+
+    h3 {
+      width: calc(50% + 292px + 58px);
+      margin-left: auto;
+    }
+
+    .about-list {
+      display: grid;
+      grid-template-areas:
+        "A it1 it4"
+        "A it2 it5"
+        "A it3 it6";
+      grid-template-columns: auto 292px 50%;
+      column-gap: 58px;
+      .about-item {
+        .about-img {
+          margin-top: 25px;
+        }
+      }
     }
   }
 
