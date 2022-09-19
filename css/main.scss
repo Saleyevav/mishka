@@ -1079,7 +1079,6 @@ header {
   .contacts {
     padding-top: 83px;
     padding-bottom: 105px;
-
     display: grid;
     grid-template-areas:
       "fl     h3      map"
@@ -1089,38 +1088,22 @@ header {
     grid-template-columns: 50% 50%;
     grid-template-columns: auto 292px 50%;
     column-gap: 58px;
-    // h3 {
-    //   grid-area: h3;
-    //   align-self: center;
-    // }
+
     .flag {
-      // grid-area: fl;
-      // width: 47px;
-      // height: 81px;
-      // background: url(../img/flag.svg);
       justify-self: flex-end;
     }
 
     .address,
     .e-mail {
-      // grid-area: addr;
       margin-top: 0;
       white-space: nowrap;
     }
 
-    // .e-mail {
-    //   grid-area: mail;
-    //   margin-top: 0;
-    // }
-
     .map {
-      grid-area: map;
-      height: 457px;
       margin: 0;
     }
 
     .chost-btn {
-      grid-area: btn;
       margin-left: 0;
     }
   }
