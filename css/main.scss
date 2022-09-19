@@ -464,6 +464,25 @@ header {
   }
 }
 
+.contacts {
+  .map {
+    height: 320px;
+    // background: url(../img/map.jpg) center no-repeat;
+    // display: flex;
+
+    // .map-pin {
+    //   height: 100px;
+    //   width: 67px;
+    //   background: url(../img/map-pin.svg);
+    //   margin: 0 auto;
+    //   align-self: center;
+    //   position: relative;
+    //   top: -35px;
+    //   left: 12px;
+    // }
+  }
+}
+
 @media (min-width: 768px) {
   body {
     font-size: 17px;

@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/main.css" />
     <title>Mishka</title>
+    <script
+      src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"
+      type="text/javascript"
+    ></script>
   </head>
   <body>
     <header>
@@ -161,6 +165,25 @@
         </div>
 
         <a href="#" class="chost-btn">Написать</a>
+      </section>
+
+      <section class="contacts wrapper">
+        <h3>Контакты</h3>
+        <div class="flag"></div>
+        <div class="e-mail">
+          <div>e-mail:</div>
+          <div>info@mimimishkashop.ru</div>
+        </div>
+        <div class="address">
+          <div>адрес:</div>
+          <div>
+            г. Санкт-Петербург<br />ул. Большая Конюшенная<br />д. 19/8, офис
+            101
+          </div>
+        </div>
+        <div id="customMap" class="map"></div>
+        <script src="./js/customMap.js"></script>
+        <a href="#" class="chost-btn">Напишите нам</a>
       </section>
     </main>
   </body>
