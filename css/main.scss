@@ -494,6 +494,7 @@ header {
     font-size: 17px;
     line-height: 30px;
   }
+
   .wrapper {
     margin-left: 50px;
     margin-right: 50px;
@@ -828,6 +829,53 @@ header {
       left: -50px;
       right: -50px;
       bottom: -76px;
+    }
+  }
+
+  .contacts {
+    padding-top: 46px;
+    padding-bottom: 57px;
+
+    display: grid;
+    grid-template-areas:
+      "h3     fl"
+      "mail   addr"
+      "map    map"
+      "btn    btn";
+    grid-template-columns: 50% 50%;
+
+    h3 {
+      grid-area: h3;
+      align-self: center;
+    }
+    .flag {
+      grid-area: fl;
+      width: 47px;
+      height: 81px;
+      background: url(../img/flag.svg);
+      justify-self: flex-end;
+    }
+    .address {
+      grid-area: addr;
+      margin-top: 28px;
+      font-size: 17px;
+    }
+
+    .e-mail {
+      grid-area: mail;
+      margin-top: 28px;
+      font-size: 17px;
+    }
+
+    .map {
+      grid-area: map;
+      height: 457px;
+      margin: 62px -50px 55px -50px;
+    }
+
+    .chost-btn {
+      grid-area: btn;
+      width: 230px;
     }
   }
 }
