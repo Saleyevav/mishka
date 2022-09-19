@@ -465,21 +465,27 @@ header {
 }
 
 .contacts {
-  .map {
-    height: 320px;
-    // background: url(../img/map.jpg) center no-repeat;
-    // display: flex;
+  padding-top: 38px;
+  padding-bottom: 38px;
 
-    // .map-pin {
-    //   height: 100px;
-    //   width: 67px;
-    //   background: url(../img/map-pin.svg);
-    //   margin: 0 auto;
-    //   align-self: center;
-    //   position: relative;
-    //   top: -35px;
-    //   left: 12px;
-    // }
+  .address,
+  .e-mail {
+    margin-top: 28px;
+    display: flex;
+    font-size: 14px;
+
+    div:first-child {
+      width: 76px;
+    }
+  }
+
+  .map {
+    height: 454px;
+    margin: 62px -30px 42px -30px;
+  }
+
+  .chost-btn {
+    margin: 0 auto;
   }
 }
 
