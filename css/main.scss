@@ -493,6 +493,7 @@ footer {
   background: #f1f1f1;
   .logo-footer {
     display: none;
+    align-self: center;
     width: 102px;
     height: 34px;
     background: url(../img/logo-footer.png) center no-repeat;
@@ -564,8 +565,14 @@ footer {
     }
 
     &:hover {
+      color: #000;
       &::after {
         background: url(../img/htmlacademy-hover.png) center no-repeat;
+      }
+    }
+    &:active {
+      &::after {
+        opacity: 0.3;
       }
     }
   }
@@ -956,6 +963,20 @@ footer {
     .chost-btn {
       grid-area: btn;
       width: 230px;
+    }
+  }
+
+  footer {
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+      height: 143px;
+      .logo-footer {
+        display: block;
+      }
+      .social {
+        border-bottom: none;
+      }
     }
   }
 }
