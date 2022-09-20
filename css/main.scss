@@ -140,6 +140,7 @@ header {
     max-height: 0;
     transition: max-height 0.2s ease-out;
     z-index: 10;
+    width: 100%;
 
     a {
       display: flex;
@@ -147,7 +148,7 @@ header {
       height: 79px;
       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
       background-color: #ffff;
-      width: 100vw;
+      // width: 100vw;
     }
 
     .item1 {
