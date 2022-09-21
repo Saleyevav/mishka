@@ -20,7 +20,8 @@ function init() {
     },
     {
       iconLayout: "default#image",
-      iconImageHref: "../img/map-pin.png", // картинка иконки
+      iconImageHref:
+        "https://raw.githubusercontent.com/Saleyevav/mishka/35af8d16c0f35dfd0fcd6837b04379f302c3947f/img/map-pin.svg", // картинка иконки
       iconImageSize: [66, 100], // размер иконки в пикселях
       iconImageOffset: [-33, -100], // позиция иконки в пикселях(считается от верхнего левого угла)
     },
