@@ -92,13 +92,16 @@ header {
     align-items: center;
     height: 79px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
     .logo {
       background: url(../img/mishka-logo-mobile.png) center no-repeat;
       width: 86px;
       height: 35px;
+
       &:hover {
         opacity: 0.6;
       }
+
       &:active {
         opacity: 0.3;
       }
@@ -117,6 +120,7 @@ header {
 
   .menu-checkbox {
     display: none;
+
     &:checked ~ .hamb {
       background: url(../img/menu-close.png);
       width: 21px;
@@ -124,6 +128,7 @@ header {
       position: absolute;
       right: 30px;
     }
+
     &:checked ~ .main-menu {
       max-height: 100%;
     }
@@ -162,7 +167,6 @@ header {
       .search-icon {
         background-image: url(../img/search.png);
         background-repeat: no-repeat;
-
         margin: 0 29px;
         width: 18px;
         height: 18px;
@@ -170,11 +174,13 @@ header {
         vertical-align: middle;
         text-align: center;
       }
+
       &:hover {
         .search-icon {
           background-image: url(../img/search-hover.png);
         }
       }
+
       &:active {
         .search-icon {
           background-image: url(../img/search-down.png);
@@ -193,11 +199,13 @@ header {
         vertical-align: middle;
         text-align: center;
       }
+
       &:hover {
         .cart-icon {
           background-image: url(../img/cart-hover.png);
         }
       }
+
       &:active {
         .cart-icon {
           background-image: url(../img/cart-down.png);
@@ -252,6 +260,7 @@ header {
           &:hover {
             position: relative;
             top: -5px;
+
             div {
               opacity: 1;
             }
@@ -345,6 +354,7 @@ header {
         object-fit: cover;
       }
     }
+
     .price {
       margin-top: 26px;
       font-weight: 700;
@@ -359,6 +369,7 @@ header {
       justify-self: center;
     }
   }
+
   &::after {
     content: "";
     position: absolute;
@@ -379,6 +390,7 @@ header {
       font-size: 17px;
       line-height: 20px;
       font-weight: 700;
+
       .about-img {
         height: 82px;
       }
@@ -497,9 +509,11 @@ footer {
     width: 102px;
     height: 34px;
     background: url(../img/logo-footer.png) center no-repeat;
+
     &:hover {
       background: url(../img/logo-footer-hover.png) center no-repeat;
     }
+
     &:active {
       opacity: 0.3;
     }
@@ -511,8 +525,10 @@ footer {
     justify-content: center;
     border-bottom: 1px solid #e5e5e5;
     min-height: 80px;
+
     a {
       display: block;
+
       &:active {
         opacity: 0.3;
       }
@@ -522,6 +538,7 @@ footer {
       width: 27px;
       height: 17px;
       background: url(../img/vkontakte.png) center no-repeat;
+
       &:hover {
         background: url(../img/vkontakte-hover.png) center no-repeat;
       }
@@ -532,6 +549,7 @@ footer {
       height: 19px;
       margin: 0 35px 0 31px;
       background: url(../img/youtube.png) center no-repeat;
+
       &:hover {
         background: url(../img/youtube-hover.png) center no-repeat;
       }
@@ -541,6 +559,7 @@ footer {
       width: 20px;
       height: 17px;
       background: url(../img/telegram.png) center no-repeat;
+
       &:hover {
         background: url(../img/telegram-hover.png) center no-repeat;
       }
@@ -566,6 +585,7 @@ footer {
 
     &:hover {
       color: #000;
+
       &::after {
         background: url(../img/htmlacademy-hover.png) center no-repeat;
       }
@@ -579,6 +599,7 @@ footer {
 }
 
 .modal {
+  display: none;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -586,7 +607,7 @@ footer {
   right: 0;
   background-color: rgba(255, 255, 255, 0.9);
   z-index: 20;
-  display: flex;
+  // display: flex;
 
   form {
     background-color: #fff;
@@ -595,7 +616,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 320px;
+    width: 320px;
     border: 1px solid #c6c6c6;
     box-shadow: 0px 5px 10px rgba(0, 1, 1, 0.25);
 
@@ -605,6 +626,7 @@ footer {
       font-size: 25px;
       line-height: 30px;
     }
+
     fieldset {
       display: flex;
       border: none;
@@ -627,6 +649,7 @@ footer {
         color: rgba(68, 68, 68, 1);
         font-size: 17px;
         font-weight: 700;
+
         span {
           display: flex;
           align-items: center;
@@ -643,9 +666,11 @@ footer {
       .s-radio:checked ~ .s-btn {
         border: 2px solid rgba(99, 209, 187, 1);
       }
+
       .m-radio:checked ~ .m-btn {
         border: 2px solid rgba(99, 209, 187, 1);
       }
+
       .l-radio:checked ~ .l-btn {
         border: 2px solid rgba(99, 209, 187, 1);
       }
@@ -689,6 +714,7 @@ footer {
       position: absolute;
       border-bottom: none;
       height: 88px;
+
       .logo {
         margin-left: 50px;
         background: url(../img/mishka-logo-tablet.png) center no-repeat;
@@ -735,10 +761,12 @@ footer {
         .search-text {
           display: none;
         }
+
         .search-icon {
           margin: 0 33px;
         }
       }
+
       .item4 {
         border-left: 1px solid rgba(0, 0, 0, 0.1);
         padding-right: 50px;
@@ -752,10 +780,12 @@ footer {
       padding-top: 20px;
       background-color: #f9f9f9;
       padding-right: 50px;
+
       a {
         margin-right: 61px;
         display: none;
       }
+
       div {
         margin-left: auto;
       }
@@ -768,6 +798,7 @@ footer {
       background: url(../img/hero-desktop1.png) no-repeat;
       background-position: top -40px center;
       background-color: #f9f9f9;
+
       .wrapper {
         height: calc(100vh - 144px);
 
@@ -795,6 +826,7 @@ footer {
           }
         }
       }
+
       &::after {
         content: "";
         position: absolute;
@@ -899,9 +931,11 @@ footer {
         "it2 it5"
         "it3 it6";
       grid-template-columns: 50% 50%;
+
       .about-item {
         font-size: 20px;
         line-height: 22px;
+
         .about-img {
           margin-top: 25px;
         }
@@ -979,6 +1013,7 @@ footer {
       width: 175px;
       justify-self: end;
       align-self: center;
+
       a {
         border: none;
       }
@@ -1020,6 +1055,7 @@ footer {
       grid-area: h3;
       align-self: center;
     }
+
     .flag {
       grid-area: fl;
       width: 47px;
@@ -1027,6 +1063,7 @@ footer {
       background: url(../img/flag.svg);
       justify-self: flex-end;
     }
+
     .address {
       grid-area: addr;
       font-size: 17px;
@@ -1054,11 +1091,35 @@ footer {
       display: flex;
       justify-content: space-between;
       height: 143px;
+
       .logo-footer {
         display: block;
       }
+
       .social {
         border-bottom: none;
+      }
+    }
+  }
+
+  .modal {
+    form {
+      width: 566px;
+      height: 336px;
+
+      h3 {
+        font-size: 30px;
+        line-height: 57px;
+      }
+
+      fieldset {
+        .size-btn {
+          width: 112px;
+        }
+      }
+
+      .submit-btn {
+        width: 352px;
       }
     }
   }
@@ -1069,6 +1130,7 @@ footer {
     font-size: 53px;
     line-height: 57px;
   }
+
   header {
     position: relative;
     min-height: 88px;
@@ -1077,6 +1139,7 @@ footer {
       position: absolute;
       left: 0;
       right: 0;
+
       .logo {
         background: url(../img/mishka-logo-desktop.png) center no-repeat;
         width: 149px;
@@ -1106,6 +1169,7 @@ footer {
       .item3 {
         margin-left: auto;
         border-left: 1px solid rgba(0, 0, 0, 0.1);
+
         .search-text {
           display: none;
         }
@@ -1118,6 +1182,7 @@ footer {
     }
     .bottom-menu {
       padding-left: 50px;
+
       a {
         margin-right: 61px;
         display: block;
@@ -1133,6 +1198,7 @@ footer {
           margin: 0 auto;
         }
       }
+
       &::after {
         height: 34px;
         bottom: -17px;
@@ -1144,6 +1210,7 @@ footer {
 
   .week-product {
     padding-bottom: 23px;
+
     .headers {
       position: relative;
       padding: 0;
@@ -1159,6 +1226,7 @@ footer {
         margin-left: 0;
         max-width: none;
         justify-self: auto;
+
         span {
           display: block;
           max-width: 80px;
@@ -1214,6 +1282,7 @@ footer {
         "A it3 it6";
       grid-template-columns: auto 292px 50%;
       column-gap: 58px;
+
       .about-item {
         .about-img {
           margin-top: 25px;
@@ -1226,6 +1295,7 @@ footer {
     margin-left: 50px;
     padding-left: 0;
   }
+
   .reviews {
     display: grid;
     grid-template-areas:
@@ -1235,21 +1305,27 @@ footer {
     grid-template-columns: auto 292px 50%;
     grid-template-rows: 1fr 1fr 1fr;
     column-gap: 58px;
+
     h3 {
       grid-area: h3;
     }
+
     .text {
       grid-area: txt;
     }
+
     .author {
       grid-area: author;
     }
+
     .arrows {
       grid-area: arrows;
     }
+
     .chost-btn {
       grid-area: btn;
     }
+
     &::after {
       content: "";
       position: absolute;
