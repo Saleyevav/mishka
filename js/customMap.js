@@ -26,7 +26,6 @@ function init() {
       iconImageOffset: [-33, -100], // позиция иконки в пикселях(считается от верхнего левого угла)
     },
   );
-
   // Добавляем метки на карту
   customMap.geoObjects.add(customPlacemark0);
 }
