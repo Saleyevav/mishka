@@ -657,6 +657,10 @@ footer {
           text-align: center;
           justify-content: center;
         }
+
+        &:hover {
+          border: 2px solid rgba(68, 68, 68, 0.6);
+        }
       }
 
       .m-btn {
