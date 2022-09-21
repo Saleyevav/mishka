@@ -20,7 +20,7 @@ function init() {
     },
     {
       iconLayout: "default#image",
-      iconImageHref: "../img/map-pin.svg", // картинка иконки
+      iconImageHref: "../img/map-pin.png", // картинка иконки
       iconImageSize: [66, 100], // размер иконки в пикселях
       iconImageOffset: [-33, -100], // позиция иконки в пикселях(считается от верхнего левого угла)
     },
